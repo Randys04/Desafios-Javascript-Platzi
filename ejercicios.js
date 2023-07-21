@@ -71,7 +71,7 @@ export function pasosHastaUno(num) {
 Solucion al ejercicio en el que una funcion recibe un numero como paramtro y retorna un arreglo con todo los
 numero primos iguales o menores al numero recibido como parametro
 */ 
-export function solution(num) {
+export function numPrimos(num) {
     let arregloPrimos = [];
 
     for (let i = 2; i <= num; i++){
