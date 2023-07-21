@@ -62,5 +62,36 @@ export function pasosHastaUno(num) {
             num++;
         }
     }
+    
     return cantidadPasos;
+}
+
+
+/*
+Solucion al ejercicio en el que una funcion recibe un numero como paramtro y retorna un arreglo con todo los
+numero primos iguales o menores al numero recibido como parametro
+*/ 
+export function solution(num) {
+    let arregloPrimos = [];
+
+    for (let i = 2; i <= num; i++){
+        let primo = false;
+
+        if (i != 1 ) {
+            let raizCuadrada = Math.round( Math.sqrt(i) );
+
+            for (let j = 2; j <= raizCuadrada; j++){
+
+                if (i % j == 0) {
+                    primo = true
+                    break;
+                }
+            }
+        
+        }
+        if (primo == false) {
+            arregloPrimos.push(i);
+        }
+    }
+    return arregloPrimos;
 }
